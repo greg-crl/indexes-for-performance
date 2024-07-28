@@ -78,6 +78,6 @@ Time: 22ms total (execution 22ms / network 0ms)
 
 ### Conclusion
 
-A filter (`WHERE` clause) in your query provides a value for a given column.  If the query can find that value in a key, rather than having to read each row of the table to get it, then the query can execute much more quickly.  How much more quickly, of course, is a function of several things: how many rows there are in the table, and what fraction of them have contain the value you're looking for.
+A filter (`WHERE` clause) in your query provides a value for a given column that the query will need to compare for all the rows in the database.  If the query can find that value in a key, rather than having to read each row of the table to get it, then the query can execute much more quickly.  How much more quickly, of course, is a function of several things: how many rows there are in the table, and what fraction of them have contain the value you're looking for.
 
 [Next Section](cover.md)
