@@ -75,4 +75,4 @@ workshop> show tables;
   public      | book         | table | root  |            10000000 | NULL
 ```
 
-[Next Section](filter.md)
+[Next Section](narrative/filter.md)
