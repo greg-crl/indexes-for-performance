@@ -2,6 +2,11 @@
 
 This workshop consists of a series of self-paced exercises that allow the student to demonstrate and explore the concepts we present in the CEA enablement on Schema Design and Query Best Practices for using secondary indexes to optimize query performance.
 
+### Setup: Preparing the data
+
+To do this workshop, we're going to load a data file into a database on a `cockroach` cluster.  To fetch and prepare the data file, follow the instructions [here](data/readme.md).
+
+
 ### Setup: Creating a test cluster
 
 Exercises can be run on any cluster, though the performance costs are easier to see when executed against a geographically dispersed cluster with small nodes, such as a GCE machine type `n1-highcpu-2`.  
@@ -74,5 +79,7 @@ workshop> show tables;
 --------------+--------------+-------+-------+---------------------+-----------
   public      | book         | table | root  |            10000000 | NULL
 ```
+
+Now that we're set up, let's get started with the exercises.
 
 [Next Section](narrative/filter.md)
