@@ -66,4 +66,13 @@ Import the data from the uploaded CSV, replacing the string node with the node n
 workshop> IMPORT INTO book (title, author_name, price, format, publish_date) CSV DATA ('nodelocal://node/workshop/library.csv');
 ```
 
-[Next Section](Section1.md)
+Check your work.  You should have a table book with 10M entries:
+
+```
+workshop> show tables;
+  schema_name |  table_name  | type  | owner | estimated_row_count | locality
+--------------+--------------+-------+-------+---------------------+-----------
+  public      | book         | table | root  |            10000000 | NULL
+```
+
+[Next Section](filter.md)
