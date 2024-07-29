@@ -105,7 +105,7 @@ workshop> explain select count(*) from book where format = 'ebook';
         spans: [/'ebook' - /'ebook']
 ```
 
-Now we want to ask our question about the average price.
+Now let's ask our question about the price of paperbacks.
 
 ```
 workshop> select round(avg(price),2) from book where format = 'paperback';
@@ -204,7 +204,16 @@ workshop> select round(avg(price),2) from book where format = 'paperback';
 Time: 1.320s total (execution 1.320s / network 0.000s)
 ```
 
-Much better, and in line with our expectations; 1.3 seconds is about how long we’ve seen it take to scan the format index looking for paperbacks.
+Much better, and in line with our expectations; 1.3 seconds is about how long we’ve seen it take to scan the format index looking for paperbacks.  Any question we ask about books filtered by format that only takes into account price can be served by this index:
+
+```
+workshop> select count(*) from book where format='paperback' and price > 95;
+  count
+----------
+  126263
+
+Time: 1.323s total (execution 1.323s / network 0.000s)
+```
 
 ### Conclusion
 
