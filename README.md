@@ -82,4 +82,4 @@ workshop> show tables;
 
 Now that we're set up, let's get started with the exercises.
 
-[Next Section](narrative/filter.md)
+[Next Section](exercises/filter.md)
