@@ -8,7 +8,7 @@ When we index on a column, we’re dividing the table into segments whose size a
 
 ### Exercise
 
-The average paperback in our database costs $50.49.  Let’s ask a different question about price.  How many of paperbacks cost more than $90?
+The average paperback in our database costs $50.49.  Let’s ask a different question about price.  How many of paperbacks cost more than $75?
 
 ```
 workshop> select count(*) from book where format='paperback' and price > 75;
@@ -60,5 +60,10 @@ Much faster, 1/3 of a second instead of a second and a half.  Let’s look at th
 ```
 
 The index on `price` produced a search span of only half a million rows, much smaller than the 2.5 million row span implied by `format = ‘paperback’`.
+
+### Conclusion
+
+We create indexes to serve queries.  Often, we create a particular index to improve the performance of a specific query.  It makes sense to define indexes that offer the smallest search span for the columns your query filters on.  Knowing the cardinality of the columns in your query makes it easier to define indexes that most improve your query's performance.
+
 
 [Next Section](compound.md)
