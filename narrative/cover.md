@@ -210,4 +210,4 @@ Much better, and in line with our expectations; 1.3 seconds is about how long we
 
 Using covering indexes is a best practice, but it should be used judiciously.  The data from the columns specified in the STORING clause is getting duplicated on disk.  There's a storage cost and an upkeep cost associated with the extra data.  If many columns must be covered by an index to satisfy a query, or if a column must be covered by a number of indexes to satisfy a variety of queries, then the cost may be prohibitive.
 
-[Next Section](compound.md)
+[Next Section](cardinality.md)
