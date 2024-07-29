@@ -154,3 +154,4 @@ The existing `book_format_price_idx index` is useful for searches that filter on
 
 You can define compound indexes to serve more than one kind of query, but you may need the same index columns combined in different order to serve others.  Everything depends on the queries.  This isn't a surprise, since secondary indexes are defined in the context of the queries they're intended to optimize.
 
+[Next Section](partial.md)
