@@ -11,7 +11,10 @@ workshop> select * from book limit 10;
 
 ### Exercise
 
-Note that the books all have the author listed by name.  How many books were written by Genevieve Zemlak?
+You see that each book lists its author by name.  How many books were written by Genevieve Zemlak?
+
+[In the query below, note that we're asking for the `count(*)` instead of the data.  That's because the data set is so large that returning the results to a CLI would be impractical.]
+
 
 ```
 workshop> select count(*) from book where author_name = 'Genevieve Zemlak';
@@ -22,7 +25,6 @@ How many were written by anybody named Ann (or whose name starts with “Ann”)
 workshop> select count(*) from book where author_name like 'Ann%';
 ```
 
-Note that we're asking for the `count(*)` instead of the data.  That's because the data set is so large that returning the results to a CLI would be impractical.
 
 How long did it take to get the results?  Why?  
 
