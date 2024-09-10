@@ -65,7 +65,7 @@ workshop> create table book (
 
 This is a very simple table, and not a realistic example of a library database schema, but it serves as the basis for the set of exercises in this workshop, and will be expanded in subsequent workshops.
 
-Import the data from the uploaded CSV, replacing the string node with the node number of the cluster node you loaded the file to.  (Note that if you’re following the instructions using `roachprod`, the node is `1`.  If you’re running a local copy of the cockroach SQL client and connecting to a remote cluster, then the `nodelocal upload` command reported which node it connected to.)
+Import the data from the uploaded CSV, replacing the string `node` with the node number of the cluster node you loaded the file to.  (Note that if you’re following the instructions using `roachprod`, the node is `1`.  If you’re running a local copy of the cockroach SQL client and connecting to a remote cluster, then the `nodelocal upload` command reported the number of the node it connected to.)
 
 ```
 workshop> IMPORT INTO book (title, author_name, price, format, publish_date) CSV DATA ('nodelocal://node/workshop/library.csv');
